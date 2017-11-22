@@ -1,0 +1,24 @@
+#mainNav .navbar-brand {
+    color: black;
+}
+
+
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: rgba(30, 197, 207, 0.56);
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link:focus:hover, #mainNav .navbar-nav>li.nav-item>a.nav-link:hover {
+    color: rgba(30, 197, 207, 0.56);
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link, #mainNav .navbar-nav>li.nav-item>a.nav-link:focus {
+    color: black;
+}
+
+#services {
+   background-color: #EAEAEA; 
+}
+
+.bg-dark {
+    background-color: rgba(33, 37, 41, 0.81) !important
+}

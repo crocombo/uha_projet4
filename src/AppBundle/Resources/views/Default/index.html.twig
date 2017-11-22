@@ -5,17 +5,13 @@
 <!--**********************************************************************************************************-->
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <img  src="{{ asset('bundles/app/img/logo4.png')}}" alt="">
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Petite phrase d'accroche / logo au dessus éventuellement</p>
-          </div>
+        <div class="col-lg-10 mx-auto">
+          <h1 class="text-uppercase">
+            <img  src="{{ asset('bundles/app/img/logo4.png')}}" alt="">
+          </h1>
+          <hr>
         </div>
+        {#<p class="text-faded mb-5">Petite phrase d'accroche / logo au dessus éventuellement</p> #}
       </div>
     </header>
 <!--**********************************************************************************************************-->
@@ -37,11 +33,312 @@
 <!--**********************************************************************************************************-->
 <!--********************************************* ACTUALITES     *********************************************-->
 <!--**********************************************************************************************************-->
-<section id="services">
-    <div class="container">
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a class="btn btn-light btn-xl js-scroll-trigger" href="qui_sommes_nous/4.0.html" target="_blank ">Actualités</a>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid p-0">
+            <div class="row no-gutters popup-gallery">
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                    <a class="portfolio-box" href="{{ asset('bundles/app/img/actualite.jpg')}}">
+                        <div class="text-center">
+                            <img class="img-fluid" src="{{ asset('bundles/app/img/actualite.jpg')}}" alt="">
+                        </div>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category  text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Actualité
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                    <a class="portfolio-box" href="{{ asset('bundles/app/img/actualite.jpg')}}">
+                        <div class="text-center">
+                            <img class="img-fluid" src="{{ asset('bundles/app/img/actualite.jpg')}}" alt="">
+                        </div>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category  text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Actualité
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                    <a class="portfolio-box" href="{{ asset('bundles/app/img/actualite.jpg')}}">
+                        <div class="text-center">
+                            <img class="img-fluid" src="{{ asset('bundles/app/img/actualite.jpg')}}" alt="">
+                        </div>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category  text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Actualité
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                    <a class="portfolio-box" href="{{ asset('bundles/app/img/actualite.jpg')}}">
+                        <div class="text-center">
+                            <img class="img-fluid" src="{{ asset('bundles/app/img/actualite.jpg')}}" alt="">
+                        </div>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category  text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Actualité
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!--**********************************************************************************************************-->
+<!--********************************************* PARTENARIAT    *********************************************-->
+<!--**********************************************************************************************************-->
+    <section id="portfolio">
+        <div class="container text-center">
+            <h2 class="mb-4">Nos partenaires</h2>
+        </div>  
+
+        <div class="container-fluid p-0">
+            <div class="row no-gutters popup-gallery">
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/actionnaires/psa2.png')}}">
+                    <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/psa2.png')}}" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Actionnaire
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/actionnaires/clemessy6.png')}}">
+                    <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/clemessy6.png')}}" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Actionnaire
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/actionnaires/groupe_seb4.png')}}">
+                    <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/groupe_seb4.png')}}" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Actionnaire
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+              <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/actionnaires/alstom3.png')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/alstom3.png')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Actionnaire
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+              <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/actionnaires/zuber_rieder2.png')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/zuber_rieder2.png')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Actionnaire
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3" style="max-height: 200px;">
+              <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/businnes_dev/adira.jpg')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/businnes_dev/adira.jpg')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Busines dev
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+              <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/businnes_dev/cci_alsace.jpg')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/businnes_dev/cci_alsace.jpg')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Busines dev
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+              <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/businnes_dev/conectus3.jpg')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/businnes_dev/conectus3.jpg')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Busines dev
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+              <a class="portfolio-box text-center href="{{ asset('bundles/app/img/comite_scien/ensisa.png')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/comite_scien/ensisa.png')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Comité science
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+              <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/comite_scien/insa.png')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/comite_scien/insa.png')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Comité science
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+              <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/comite_scien/UHA.png')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/comite_scien/UHA.png')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Comité science
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+              <a class="portfolio-box text-center" href="{{ asset('bundles/app/img/comite_scien/univeriste_stras.png')}}">
+                <img class="img-fluid" src="{{ asset('bundles/app/img/comite_scien/univeriste_stras.png')}}" alt="">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-category text-faded">
+                      Category
+                    </div>
+                    <div class="project-name">
+                      Comité science
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+<!--**********************************************************************************************************-->
+<!--********************************************* EVENEMENTS     *********************************************-->
+<!--**********************************************************************************************************-->
+    <section class="bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Evènements</h2>
+            <a class="btn btn-light btn-xl sr-button" href="event">voir plus</a>
+        </div>        
+
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="qui_sommes_nous/4.0.html" target="_blank ">Actualités</a>
+          <div class="col-lg-12 text-center">
                 <hr class="my-4">
             </div>
         </div>
@@ -50,10 +347,10 @@
     <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <a class="portfolio-box" href="{{ asset('bundles/app/img/actualite.jpg')}}">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <a class="portfolio-box" href="{{ asset('bundles/app/img/event.png')}}">
                     <div class="text-center">
-                        <img class="img-fluid" src="{{ asset('bundles/app/img/actualite.jpg')}}" alt="">
+                        <img class="img-fluid" src="{{ asset('bundles/app/img/event.png')}}" alt="">
                     </div>
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
@@ -68,9 +365,11 @@
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <a class="portfolio-box" href="{{ asset('bundles/app/img/actualite.jpg')}}">
-                    <img class="img-fluid" src="{{ asset('bundles/app/img/actualite.jpg')}}" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <a class="portfolio-box" href="{{ asset('bundles/app/img/event.png')}}">
+                    <div class="text-center">
+                        <img class="img-fluid" src="{{ asset('bundles/app/img/event.png')}}" alt="">
+                    </div>
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category  text-faded">
@@ -84,9 +383,11 @@
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <a class="portfolio-box" href="{{ asset('bundles/app/img/actualite.jpg')}}">
-                    <img class="img-fluid" src="{{ asset('bundles/app/img/actualite.jpg')}}" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <a class="portfolio-box" href="{{ asset('bundles/app/img/event.png')}}">
+                    <div class="text-center">
+                        <img class="img-fluid" src="{{ asset('bundles/app/img/event.png')}}" alt="">
+                    </div>
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category  text-faded">
@@ -100,9 +401,11 @@
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <a class="portfolio-box" href="{{ asset('bundles/app/img/actualite.jpg')}}">
-                    <img class="img-fluid" src="{{ asset('bundles/app/img/actualite.jpg')}}" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <a class="portfolio-box" href="{{ asset('bundles/app/img/event.png')}}">
+                    <div class="text-center">
+                        <img class="img-fluid" src="{{ asset('bundles/app/img/event.png')}}" alt="">
+                    </div>
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category  text-faded">
@@ -114,299 +417,11 @@
                         </div>
                     </div>
                 </a>
-            </div>
-
-
+            </div>            
 
         </div>
     </div>
-
-
-
-
 </section>
-<!--**********************************************************************************************************-->
-<!--********************************************* PARTENARIAT    *********************************************-->
-<!--**********************************************************************************************************-->
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-2 col-sm-6" style="max-height: 200px;">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/actionnaires/psa2.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/psa2.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Actionnaire
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/actionnaires/clemessy6.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/clemessy6.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Actionnaire
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/actionnaires/groupe_seb4.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/groupe_seb4.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Actionnaire
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/actionnaires/alstom3.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/alstom3.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Actionnaire
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/actionnaires/zuber_rieder2.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/actionnaires/zuber_rieder2.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Actionnaire
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6" style="max-height: 200px;">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/businnes_dev/adira.jpg')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/businnes_dev/adira.jpg')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Busines dev
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-      <div class="col-lg-2 col-sm-6">
-        <a class="portfolio-box" href="{{ asset('bundles/app/img/businnes_dev/cci_alsace.jpg')}}">
-          <img class="img-fluid" src="{{ asset('bundles/app/img/businnes_dev/cci_alsace.jpg')}}" alt="">
-          <div class="portfolio-box-caption">
-            <div class="portfolio-box-caption-content">
-              <div class="project-category text-faded">
-                Category
-              </div>
-              <div class="project-name">
-                Busines dev
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/businnes_dev/conectus3.jpg')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/businnes_dev/conectus3.jpg')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Busines dev
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/comite_scien/ensisa.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/comite_scien/ensisa.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Comité science
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/comite_scien/insa.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/comite_scien/insa.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Comité science
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/comite_scien/UHA.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/comite_scien/UHA.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Comité science
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <a class="portfolio-box" href="{{ asset('bundles/app/img/comite_scien/univeriste_stras.png')}}">
-              <img class="img-fluid" src="{{ asset('bundles/app/img/comite_scien/univeriste_stras.png')}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Comité science
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-      </div>
-      </div>
-    </section>
-
-<!--**********************************************************************************************************-->
-<!--********************************************* EVENEMENTS     *********************************************-->
-<!--**********************************************************************************************************-->
-    <section class="bg-dark text-white">
-
-      <div class="container text-center">
-        <h2 class="mb-4">Evènements</h2>
-        <a class="btn btn-light btn-xl sr-button" href="event">voir plus</a>
-      </div>
-        <div class="container-fluid p-0">
-            <div class="row no-gutters popup-gallery">
-                <div class="col-lg-2 col-sm-6" style="margin-left: 89px;
-                                                      margin-right: 50px;
-                                                       margin-top: 20px;
-                                                                        ">
-                    <a class="portfolio-box" href="{{ asset('bundles/app/img/event.png')}}">
-                        <img class="img-fluid" src="{{ asset('bundles/app/img/event.png')}}" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category  text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Event
-                                </div>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-
-                <div class="col-lg-2 col-sm-6" style="margin-left: 89px;
-                                                      margin-right: 50px;
-                                                       margin-top: 20px;
-                                                                        ">
-                    <a class="portfolio-box" href="{{ asset('bundles/app/img/event.png')}}">
-                        <img class="img-fluid" src="{{ asset('bundles/app/img/event.png')}}" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Event
-                                </div>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-                <div class="col-lg-2 col-sm-6" style="margin-left: 89px;
-                                                      margin-right: 50px;
-                                                       margin-top: 20px;
-                                                                        ">
-                    <a class="portfolio-box" href="{{ asset('bundles/app/img/event.png')}}">
-                        <img class="img-fluid" src="{{ asset('bundles/app/img/event.png')}}" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Event
-                                </div>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-                <div class="col-lg-2 col-sm-6" style="margin-left: 89px;
-                                                      margin-right: 50px;
-                                                       margin-top: 20px;
-                                                                        ">
-                    <a class="portfolio-box" href="{{ asset('bundles/app/img/event.png')}}">
-                        <img class="img-fluid" src="{{ asset('bundles/app/img/event.png')}}" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Event
-                                </div>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </section>
 <!--**********************************************************************************************************-->
 <!--********************************************* CONTACT        *********************************************-->
 <!--**********************************************************************************************************-->
