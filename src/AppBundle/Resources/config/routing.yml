@@ -1,3 +1,29 @@
+#PAGE ACCUEIL
 app_homepage:
     path:   /home/
     defaults: { _controller: AppBundle:Default:index }
+
+#QUI SOMMES-NOUS
+app_whoarewe:
+    path:     /quisommesnous/
+    defaults: { _controller: AppBundle:Default:whoarewe }  
+
+#ACTUALITÉS
+app_new:
+    path:     /actualites/
+    defaults: { _controller: AppBundle:Default:new }
+   
+#PARTENAIRES
+app_partner:
+    path:     /partenaires/
+    defaults: { _controller: AppBundle:Default:partner }
+
+#EVENTS
+app_event:
+    path:     /evenements/
+    defaults: { _controller: AppBundle:Default:event }
+
+#CONTACT
+app_contact:
+    path:     /contact/
+    defaults: { _controller: AppBundle:Default:contact }
