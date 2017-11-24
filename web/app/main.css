@@ -22,3 +22,7 @@
 .bg-dark {
     background-color: rgba(33, 37, 41, 0.81) !important
 }
+
+#contact {
+    padding-top: 200px;
+}

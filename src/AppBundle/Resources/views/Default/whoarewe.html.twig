@@ -1,7 +1,44 @@
 {% extends '::baseFront.html.twig' %}
 
+
 {% block body %}
+    <header class="masthead text-center text-white d-flex">
+        <div class="container my-auto">
 
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="section-heading text-white">Qui sommes-nous ?</h2>
+                        <hr class="light my-4">
+                        <p class="text-faded mb-4">
+                        Aujourd’hui, la mondialisation des marchés obligent les acteurs industriels français à
+                        renforcer la compétitivité des produits qu’ils proposent à leurs clients.
+                        Les acteurs sont confrontés à la nécessité de moderniser leurs outils de production en
+                        innovant avec des solutions de l’industrie du futur.
+                        </p>
+                    </div>
 
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="section-heading text-white">Notre Vocation</h2>
+                        <hr class="light my-4">
+                        <p class="text-faded mb-4">
+                            La vocation de 4itec4.0 est de favoriser l’éclosion d’innovations.
+                            Elle ambitionne d’accélérer leur industrialisation et leur diffusion au sein des sites de
+                            production manufacturière mondiaux.<br> 
+                            4itec4.0 aspire à devenir une vitrine
+                            technologique de l’industrie française
+                        </p>
+                    </div>
 
+                </div>
+            </div>
+
+            <div class="col-lg-10 mx-auto">
+                <h1 class="text-uppercase">
+                    <img  src="{{ asset('app/img/logo4.png')}}" alt="">
+                </h1>
+            </div>
+
+        </div>
+    </header>
 {% endblock %}
