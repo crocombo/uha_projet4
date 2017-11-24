@@ -1,0 +1,51 @@
+<!--**********************************************************************************************************-->
+<!--********************************************* NAVBAR FRONT   *********************************************-->
+<!--**********************************************************************************************************-->
+<!-- Navigation -->
+<div class="container">
+
+    <a class="navbar-brand js-scroll-trigger" href="{{ path('app_homepage') }}">accueil</a>
+
+    <a class="navbar-brand js-scroll-trigger" href="{{ path('user_homepage') }}">connexion</a>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{{ path('app_homepage') }}#about">Qui sommes-nous</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{{ path('app_homepage') }}#services">Actualités</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{{ path('app_homepage') }}#portfolio">Partenaires</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{{ path('app_homepage') }}#event">Evénements</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{{ path('app_homepage') }}#contact">Contact</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+{#
+{{ path('user_homepage') }}
+{{ path('app_whoarewe') }}
+{{ path('app_news') }}
+{{ path('app_partner') }}
+{{ path('app_event') }}
+{{ path('app_contact') }}
+#}
+
+
