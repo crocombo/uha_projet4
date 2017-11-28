@@ -1,0 +1,6 @@
+#AdminBundle/Resources/config/routing.yml
+
+
+admin_homepage:
+    path:     /
+    defaults: { _controller: AdminBundle:Default:index }

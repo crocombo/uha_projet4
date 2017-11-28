@@ -1,6 +1,18 @@
+#app/config/routing.yml
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:     /user
+
 
 app:
     resource: "@AppBundle/Resources/config/routing.yml"
@@ -10,7 +22,3 @@ app:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
-
-
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

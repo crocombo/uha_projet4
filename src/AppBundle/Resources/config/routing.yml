@@ -1,3 +1,6 @@
+#AppBundle/Resources/config/routing.yml
+
+
 #PAGE ACCUEIL
 app_homepage:
     path:   /home/
