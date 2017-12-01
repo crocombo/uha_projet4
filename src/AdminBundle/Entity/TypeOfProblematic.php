@@ -36,6 +36,22 @@ class TypeOfProblematic
     private $description;
 
 
+
+
+
+    //Relation Entity TypeOfProblematic*********************************************************
+
+    /**
+     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\Problematic", cascade={"persist"}, mappedBy="problematic")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $problematic;
+
+
+
+
+
+
     /**
      * Get id
      *

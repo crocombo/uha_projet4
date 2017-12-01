@@ -29,6 +29,23 @@ class Image
     private $image;
 
 
+
+
+
+    //Relation Entity Image*********************************************************
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Image", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $article;
+
+
+
+
+
+
+
     /**
      * Get id
      *

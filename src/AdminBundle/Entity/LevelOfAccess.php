@@ -4,6 +4,7 @@ namespace AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * LevelOfAccess
  *
@@ -34,6 +35,23 @@ class LevelOfAccess
      * @ORM\Column(name="AccessLevel", type="integer")
      */
     private $accessLevel;
+
+
+
+
+
+
+
+    //Relation Entity LevelOfAccess*********************************************************
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\ProjectUserRole", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $projectUserRole;
+
+
+
 
 
     /**

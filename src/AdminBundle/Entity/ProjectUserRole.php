@@ -36,6 +36,36 @@ class ProjectUserRole
     private $userId;
 
 
+
+
+
+    //Relation Entity ProjectUserRole*********************************************************
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\Project", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $project;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\LevelOfAccess", cascade={"persist"}, mappedBy="levelOfAccess")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $levelOfAccess;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="UserBundle\Entity\User", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
+
+
+
+
+
     /**
      * Get id
      *

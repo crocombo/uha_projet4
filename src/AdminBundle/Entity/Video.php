@@ -29,6 +29,24 @@ class Video
     private $video;
 
 
+
+
+
+
+    //Relation Entity Video*********************************************************
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Video", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $article;
+
+
+
+
+
+
+
     /**
      * Get id
      *

@@ -36,6 +36,24 @@ class TypeOfEvent
     private $isFree;
 
 
+
+
+
+
+    //Relation Entity TypeOfEvent*********************************************************
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\TypeOfEvent", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $typeOfEvent;
+
+
+
+
+
+
+
     /**
      * Get id
      *

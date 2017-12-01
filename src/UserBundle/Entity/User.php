@@ -23,6 +23,29 @@ class User extends BaseUser
     protected $id;
 
 
+
+
+
+    //Relation Entity User*********************************************************
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\GroupMember", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $groupMember;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\ProjectUserRole", cascade={"persist"}, mappedBy="user")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $projectUserRole;
+
+
+
+
+
+
     /**
      * Get id
      *

@@ -36,6 +36,22 @@ class GroupMember
     private $description;
 
 
+
+
+
+    //Relation Entity GroupeMember*********************************************************
+
+    /**
+     * @ORM\OneToMany(targetEntity="UserBundle\Entity\User", cascade={"persist"}, mappedBy="groupMember")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $user;
+
+
+
+
+
+
     /**
      * Get id
      *

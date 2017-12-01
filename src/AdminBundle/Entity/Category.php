@@ -29,6 +29,22 @@ class Category
     private $name;
 
 
+
+
+
+    //Relation Entity Category*********************************************************
+
+    /**
+     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\Category", cascade={"persist"}, mappedBy="category")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
+
+
+
+
+
+
     /**
      * Get id
      *

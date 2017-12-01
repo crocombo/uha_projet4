@@ -22,6 +22,23 @@ class Document
     private $id;
 
 
+
+
+
+    //Relation Entity Document*********************************************************
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Document", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $document;
+
+
+
+
+
+
+
     /**
      * Get id
      *

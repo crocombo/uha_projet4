@@ -36,6 +36,30 @@ class Problematic
     private $description;
 
 
+
+
+
+    //Relation Entity Problematic*********************************************************
+
+    /**
+     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\Project", cascade={"persist"}, mappedBy="project")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $project;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\TypeOfProblematic", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $typeOfProblematic;
+
+
+
+
+
+
+
     /**
      * Get id
      *

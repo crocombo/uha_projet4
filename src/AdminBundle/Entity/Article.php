@@ -36,6 +36,48 @@ class Article
     private $description;
 
 
+
+
+
+    //Relation Entity Article*********************************************************
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\Category", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
+
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Document", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $document;
+
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Video", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $video;
+
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Image", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $image;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\Project", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $project;
+
+
+
+
     /**
      * Get id
      *

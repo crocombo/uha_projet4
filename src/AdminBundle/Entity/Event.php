@@ -28,6 +28,25 @@ class Event
      */
     private $name;
 
+
+
+
+
+
+    //Relation Entity Event*********************************************************
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Event", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $event;
+
+
+
+
+
+
+
     /**
      * @var string
      *

@@ -36,6 +36,37 @@ class Project
     private $description;
 
 
+
+
+
+    //Relation Entity Project*********************************************************
+
+    /**
+     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\Article", cascade={"persist"}, mappedBy="projet")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $article;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\Problematic", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $problematic;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\ProjectUserRole", cascade={"persist"}, mappedBy="projet")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $projectUserRole;
+
+
+
+
+
+
+
     /**
      * Get id
      *
