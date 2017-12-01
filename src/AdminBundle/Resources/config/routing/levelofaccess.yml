@@ -1,0 +1,24 @@
+levelofaccess_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:LevelOfAccess:index" }
+    methods:  GET
+
+levelofaccess_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:LevelOfAccess:show" }
+    methods:  GET
+
+levelofaccess_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:LevelOfAccess:new" }
+    methods:  [GET, POST]
+
+levelofaccess_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:LevelOfAccess:edit" }
+    methods:  [GET, POST]
+
+levelofaccess_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:LevelOfAccess:delete" }
+    methods:  DELETE

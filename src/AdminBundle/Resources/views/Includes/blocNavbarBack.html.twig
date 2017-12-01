@@ -17,26 +17,68 @@
         <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">Back 1</a>
+                <a class="nav-link js-scroll-trigger" href="{{ path('user_index') }}">utilisateurs</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">Back 2</a>
+                <a class="nav-link js-scroll-trigger" href="{{ path('project_index') }}">projets</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">Back 3</a>
+                <a class="nav-link js-scroll-trigger" href="{{ path('article_index') }}">articles</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">Back 4</a>
+                <a class="nav-link js-scroll-trigger" href="{{ path('actuality_index') }}">actualités</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">Back 5</a>
+                <a class="nav-link js-scroll-trigger" href="{{ path('event_index') }}">événements</a>
             </li>
+
+
+
+
+            <li class="dropdown">
+              <button class="btn btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action1</a></li>
+                <li><a href="#">Action2</a></li>
+                <li><a href="#">Action3</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Action4</a></li>
+                <li><a href="#">Action4</a></li>
+              </ul>
+            </li>
+
+
 
         </ul>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+{#
+
+{{ path('user_index') }}
+{{ path('project_index') }}
+{{ path('article_index') }}
+{{ path('actuality_index') }}
+{{ path('event_index') }}
+
+#}
+
+
 

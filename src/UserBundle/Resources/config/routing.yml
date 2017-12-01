@@ -1,3 +1,7 @@
+user_user:
+    resource: "@UserBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
 #UserBundle/Resources/config/routing.yml
 
 #user_homepage:

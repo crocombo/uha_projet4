@@ -1,6 +1,49 @@
-#AdminBundle/Resources/config/routing.yml
-
-
+#AdminBundle/Resources/config/routing.yml ************************************
+#*****************************************************************************
+# Event **********************************************************************
+admin_event:
+    resource: "@AdminBundle/Resources/config/routing/event.yml"
+    prefix:   /event
+#*****************************************************************************
+# Actuality ******************************************************************
+admin_actuality:
+    resource: "@AdminBundle/Resources/config/routing/actuality.yml"
+    prefix:   /actualite
+#*****************************************************************************
+# LevelOfAccess **************************************************************
+admin_levelofaccess:
+    resource: "@AdminBundle/Resources/config/routing/levelofaccess.yml"
+    prefix:   /levelofaccess
+#*****************************************************************************
+# ProjecUserRole *************************************************************
+admin_projectuserrole:
+    resource: "@AdminBundle/Resources/config/routing/projectuserrole.yml"
+    prefix:   /projectuserrole
+#*****************************************************************************
+# Problematic ****************************************************************
+admin_problematic:
+    resource: "@AdminBundle/Resources/config/routing/problematic.yml"
+    prefix:   /problematique
+# TypeOfProblematic **********************************************************
+admin_typeofproblematic:
+    resource: "@AdminBundle/Resources/config/routing/typeofproblematic.yml"
+    prefix:   /type_de_projet
+#*****************************************************************************
+# Project ********************************************************************
+admin_project:
+    resource: "@AdminBundle/Resources/config/routing/project.yml"
+    prefix:   /projet
+#*****************************************************************************
+# Article ********************************************************************
+admin_article:
+    resource: "@AdminBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+#*****************************************************************************
+# HomePage *******************************************************************
 admin_homepage:
     path:     /
     defaults: { _controller: AdminBundle:Default:index }
+#*****************************************************************************
+#*****************************************************************************
+
+

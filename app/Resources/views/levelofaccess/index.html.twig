@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Levelofaccesses list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Accesslevel</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for levelOfAccess in levelOfAccesses %}
+            <tr>
+                <td><a href="{{ path('levelofaccess_show', { 'id': levelOfAccess.id }) }}">{{ levelOfAccess.id }}</a></td>
+                <td>{{ levelOfAccess.title }}</td>
+                <td>{{ levelOfAccess.accessLevel }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('levelofaccess_show', { 'id': levelOfAccess.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('levelofaccess_edit', { 'id': levelOfAccess.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('levelofaccess_new') }}">Create a new levelOfAccess</a>
+        </li>
+    </ul>
+{% endblock %}

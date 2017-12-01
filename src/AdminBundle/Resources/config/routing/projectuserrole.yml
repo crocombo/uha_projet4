@@ -1,0 +1,24 @@
+projectuserrole_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:ProjectUserRole:index" }
+    methods:  GET
+
+projectuserrole_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:ProjectUserRole:show" }
+    methods:  GET
+
+projectuserrole_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:ProjectUserRole:new" }
+    methods:  [GET, POST]
+
+projectuserrole_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:ProjectUserRole:edit" }
+    methods:  [GET, POST]
+
+projectuserrole_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:ProjectUserRole:delete" }
+    methods:  DELETE

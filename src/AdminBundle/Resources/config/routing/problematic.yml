@@ -1,0 +1,24 @@
+problematic_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:Problematic:index" }
+    methods:  GET
+
+problematic_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:Problematic:show" }
+    methods:  GET
+
+problematic_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:Problematic:new" }
+    methods:  [GET, POST]
+
+problematic_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:Problematic:edit" }
+    methods:  [GET, POST]
+
+problematic_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:Problematic:delete" }
+    methods:  DELETE

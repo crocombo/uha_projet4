@@ -1,0 +1,24 @@
+actuality_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:Actuality:index" }
+    methods:  GET
+
+actuality_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:Actuality:show" }
+    methods:  GET
+
+actuality_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:Actuality:new" }
+    methods:  [GET, POST]
+
+actuality_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:Actuality:edit" }
+    methods:  [GET, POST]
+
+actuality_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:Actuality:delete" }
+    methods:  DELETE
