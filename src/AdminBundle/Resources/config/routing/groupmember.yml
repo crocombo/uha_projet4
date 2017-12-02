@@ -1,0 +1,24 @@
+groupmember_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:GroupMember:index" }
+    methods:  GET
+
+groupmember_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:GroupMember:show" }
+    methods:  GET
+
+groupmember_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:GroupMember:new" }
+    methods:  [GET, POST]
+
+groupmember_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:GroupMember:edit" }
+    methods:  [GET, POST]
+
+groupmember_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:GroupMember:delete" }
+    methods:  DELETE

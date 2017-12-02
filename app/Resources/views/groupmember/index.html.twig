@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Groupmembers list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for groupMember in groupMembers %}
+            <tr>
+                <td><a href="{{ path('groupmember_show', { 'id': groupMember.id }) }}">{{ groupMember.id }}</a></td>
+                <td>{{ groupMember.name }}</td>
+                <td>{{ groupMember.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('groupmember_show', { 'id': groupMember.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('groupmember_edit', { 'id': groupMember.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('groupmember_new') }}">Create a new groupMember</a>
+        </li>
+    </ul>
+{% endblock %}

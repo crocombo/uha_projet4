@@ -16,6 +16,9 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
 
+
+
+{#
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="{{ path('user_index') }}">utilisateurs</a>
             </li>
@@ -35,21 +38,36 @@
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="{{ path('event_index') }}">événements</a>
             </li>
-
+#}
 
 
 
             <li class="dropdown">
               <button class="btn btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Dropdown <span class="caret"></span>
+                OPTIONS <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Action1</a></li>
-                <li><a href="#">Action2</a></li>
-                <li><a href="#">Action3</a></li>
+                <li><a href="{{ path('groupmember_index') }}">Groupe</a></li>
+                <li><a href="{{ path('user_index') }}">Utilisateurs</a></li>
+                <li><a href="{{ path('projectuserrole_index') }}">Role d'utilisateur</a></li>
+                <li><a href="{{ path('levelofaccess_index') }}">Niveau d'accès d'utilisateur</a></li>
+
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Action4</a></li>
-                <li><a href="#">Action4</a></li>
+                <li><a href="{{ path('category_index') }}">Categorie</a></li>
+                <li><a href="{{ path('article_index') }}">Article</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="{{ path('project_index') }}">Projet</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="{{ path('problematic_index') }}">Problematique</a></li>
+                <li><a href="{{ path('typeofproblematic_index') }}">Type de problematique</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="{{ path('actuality_index') }}">Actualité</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="{{ path('event_index') }}">Evénement</a></li>
               </ul>
             </li>
 
@@ -59,24 +77,27 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
 {#
-
+{{ path('groupmember_index') }}
 {{ path('user_index') }}
-{{ path('project_index') }}
+{{ path('projectuserrole_index') }}
+{{ path('levelofaccess_index') }}
+
+{{ path('category_index') }}
 {{ path('article_index') }}
+
+{{ path('project_index') }}
+
+{{ path('problematic_index') }}
+{{ path('typeofproblematic_index') }}
+
 {{ path('actuality_index') }}
+
 {{ path('event_index') }}
+
+
+
+
 
 #}
 

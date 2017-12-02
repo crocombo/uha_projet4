@@ -1,5 +1,14 @@
 #AdminBundle/Resources/config/routing.yml ************************************
 #*****************************************************************************
+
+# GroupMember ****************************************************************
+admin_groupmember:
+    resource: "@AdminBundle/Resources/config/routing/groupmember.yml"
+    prefix:   /groupe
+# Category *******************************************************************
+admin_category:
+    resource: "@AdminBundle/Resources/config/routing/category.yml"
+    prefix:   /category
 # Event **********************************************************************
 admin_event:
     resource: "@AdminBundle/Resources/config/routing/event.yml"
