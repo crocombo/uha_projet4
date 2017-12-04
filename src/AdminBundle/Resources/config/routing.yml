@@ -1,6 +1,18 @@
 #AdminBundle/Resources/config/routing.yml ************************************
 #*****************************************************************************
 
+# MyEvent *******************************************************************
+admin_myevent:
+    resource: "@AdminBundle/Resources/config/routing/myevent.yml"
+    prefix:   /myevent
+# TypeEvent ******************************************************************
+admin_typeevent:
+    resource: "@AdminBundle/Resources/config/routing/typeevent.yml"
+    prefix:   /type_d_event
+# TypeOfEvent ****************************************************************
+admin_typeofevent:
+    resource: "@AdminBundle/Resources/config/routing/typeofevent.yml"
+    prefix:   /Type_d_evenement
 # GroupMember ****************************************************************
 admin_groupmember:
     resource: "@AdminBundle/Resources/config/routing/groupmember.yml"

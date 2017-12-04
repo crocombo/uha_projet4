@@ -124,5 +124,116 @@ class Project
     {
         return $this->description;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->article = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->projectUserRole = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Add article
+     *
+     * @param \AdminBundle\Entity\Article $article
+     *
+     * @return Project
+     */
+    public function addArticle(\AdminBundle\Entity\Article $article)
+    {
+        $this->article[] = $article;
+
+        return $this;
+    }
+
+    /**
+     * Remove article
+     *
+     * @param \AdminBundle\Entity\Article $article
+     */
+    public function removeArticle(\AdminBundle\Entity\Article $article)
+    {
+        $this->article->removeElement($article);
+    }
+
+    /**
+     * Get article
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getArticle()
+    {
+        return $this->article;
+    }
+
+    /**
+     * Set problematic
+     *
+     * @param \AdminBundle\Entity\Problematic $problematic
+     *
+     * @return Project
+     */
+    public function setProblematic(\AdminBundle\Entity\Problematic $problematic)
+    {
+        $this->problematic = $problematic;
+
+        return $this;
+    }
+
+    /**
+     * Get problematic
+     *
+     * @return \AdminBundle\Entity\Problematic
+     */
+    public function getProblematic()
+    {
+        return $this->problematic;
+    }
+
+    /**
+     * Add projectUserRole
+     *
+     * @param \AdminBundle\Entity\ProjectUserRole $projectUserRole
+     *
+     * @return Project
+     */
+    public function addProjectUserRole(\AdminBundle\Entity\ProjectUserRole $projectUserRole)
+    {
+        $this->projectUserRole[] = $projectUserRole;
+
+        return $this;
+    }
+
+    /**
+     * Remove projectUserRole
+     *
+     * @param \AdminBundle\Entity\ProjectUserRole $projectUserRole
+     */
+    public function removeProjectUserRole(\AdminBundle\Entity\ProjectUserRole $projectUserRole)
+    {
+        $this->projectUserRole->removeElement($projectUserRole);
+    }
+
+    /**
+     * Get projectUserRole
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProjectUserRole()
+    {
+        return $this->projectUserRole;
+    }
+
+
+    // Function permetant de representeter un objet designé par une chaine de caractere (string) ex pour liste deroulante...
+    public function __toString()
+    {
+        return $this->getName();
+    }
+    // Exemple avec Id:
+    //public function __toString()
+    //{
+    //    return (string) $this->getId();
+    //}
+}

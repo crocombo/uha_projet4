@@ -45,7 +45,7 @@ class Event
      * @ORM\OneToOne(targetEntity="AdminBundle\Entity\TypeEvent", cascade={"persist"})
      * @ORM\JoinColumn(nullable=true)
      */
-    private $event;
+    private $typeEvent;
 
 
 

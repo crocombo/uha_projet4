@@ -5,12 +5,12 @@ namespace AdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * TypeOfProblematic
+ * MyEvent
  *
- * @ORM\Table(name="type_of_problematic")
- * @ORM\Entity(repositoryClass="AdminBundle\Repository\TypeOfProblematicRepository")
+ * @ORM\Table(name="my_event")
+ * @ORM\Entity(repositoryClass="AdminBundle\Repository\MyEventRepository")
  */
-class TypeOfProblematic
+class MyEvent
 {
     /**
      * @var int
@@ -24,9 +24,16 @@ class TypeOfProblematic
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=100, unique=true)
+     * @ORM\Column(name="name", type="string", length=100)
      */
     private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="typeOfTheEvent", type="string", length=100)
+     */
+    private $typeOfTheEvent;
 
     /**
      * @var string
@@ -34,22 +41,6 @@ class TypeOfProblematic
      * @ORM\Column(name="description", type="text")
      */
     private $description;
-
-
-
-
-
-    //Relation Entity TypeOfProblematic*********************************************************
-
-    /**
-     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\Problematic", cascade={"persist"}, mappedBy="problematic")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $problematic;
-
-
-
-
 
 
     /**
@@ -67,7 +58,7 @@ class TypeOfProblematic
      *
      * @param string $name
      *
-     * @return TypeOfProblematic
+     * @return MyEvent
      */
     public function setName($name)
     {
@@ -87,11 +78,35 @@ class TypeOfProblematic
     }
 
     /**
+     * Set typeOfTheEvent
+     *
+     * @param string $typeOfTheEvent
+     *
+     * @return MyEvent
+     */
+    public function setTypeOfTheEvent($typeOfTheEvent)
+    {
+        $this->typeOfTheEvent = $typeOfTheEvent;
+
+        return $this;
+    }
+
+    /**
+     * Get typeOfTheEvent
+     *
+     * @return string
+     */
+    public function getTypeOfTheEvent()
+    {
+        return $this->typeOfTheEvent;
+    }
+
+    /**
      * Set description
      *
      * @param string $description
      *
-     * @return TypeOfProblematic
+     * @return MyEvent
      */
     public function setDescription($description)
     {
@@ -109,17 +124,5 @@ class TypeOfProblematic
     {
         return $this->description;
     }
-
-    // Function permetant de representeter un objet designé par une chaine de caractere (string) ex pour liste deroulante...
-    public function __toString()
-    {
-        return $this->getName();
-    }
-    // Exemple avec Id:
-    //public function __toString()
-    //{
-    //    return (string) $this->getId();
-    //}
-
 }
 

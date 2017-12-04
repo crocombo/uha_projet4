@@ -37,7 +37,7 @@ class Video
 
     /**
      * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Video", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $article;
 

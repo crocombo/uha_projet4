@@ -1,0 +1,24 @@
+typeofevent_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:TypeOfEvent:index" }
+    methods:  GET
+
+typeofevent_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:TypeOfEvent:show" }
+    methods:  GET
+
+typeofevent_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:TypeOfEvent:new" }
+    methods:  [GET, POST]
+
+typeofevent_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:TypeOfEvent:edit" }
+    methods:  [GET, POST]
+
+typeofevent_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:TypeOfEvent:delete" }
+    methods:  DELETE

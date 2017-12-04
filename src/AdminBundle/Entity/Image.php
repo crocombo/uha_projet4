@@ -36,7 +36,7 @@ class Image
 
     /**
      * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Image", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $article;
 

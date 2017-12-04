@@ -78,5 +78,26 @@ class Category
     {
         return $this->name;
     }
+
+
+
+
+
+
+
+
+
+
+
+    // Function permetant de representeter un objet designé par une chaine de caractere (string) ex pour liste deroulante...
+    public function __toString()
+    {
+        return $this->getName();
+    }
+    // Exemple avec Id:
+    //public function __toString()
+    //{
+    //    return (string) $this->getId();
+    //}
 }
 

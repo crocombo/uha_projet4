@@ -52,6 +52,16 @@ class TypeOfEvent
 
 
 
+    //Relation Entity TypeOfEvent*********************************************************
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\TypeOfEvent", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $typeOfEvent;
+
+
+
 
     /**
      * Get id
@@ -187,16 +197,5 @@ class TypeOfEvent
         return $this->isFree;
     }
 
-
-    // Function permetant de representeter un objet designé par une chaine de caractere (string) ex pour liste deroulante...
-    public function __toString()
-    {
-        return $this->getName();
-    }
-    // Exemple avec Id:
-    //public function __toString()
-    //{
-    //    return (string) $this->getId();
-    //}
 
 }

@@ -5,12 +5,12 @@ namespace AdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Problematic
+ * TypeEvent
  *
- * @ORM\Table(name="problematic")
- * @ORM\Entity(repositoryClass="AdminBundle\Repository\ProblematicRepository")
+ * @ORM\Table(name="type_event")
+ * @ORM\Entity(repositoryClass="AdminBundle\Repository\TypeEventRepository")
  */
-class Problematic
+class TypeEvent
 {
     /**
      * @var int
@@ -38,21 +38,15 @@ class Problematic
 
 
 
-
-    //Relation Entity Problematic*********************************************************
-
-    /**
-     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\Project", cascade={"persist"}, mappedBy="project")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $project;
-
+    //Relation Entity TypeEvent*********************************************************
 
     /**
-     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\TypeOfProblematic", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Event", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=true)
      */
-    private $typeOfProblematic;
+    private $event;
+
+
 
 
 
@@ -75,7 +69,7 @@ class Problematic
      *
      * @param string $name
      *
-     * @return Problematic
+     * @return TypeEvent
      */
     public function setName($name)
     {
@@ -99,7 +93,7 @@ class Problematic
      *
      * @param string $description
      *
-     * @return Problematic
+     * @return TypeEvent
      */
     public function setDescription($description)
     {
@@ -117,75 +111,58 @@ class Problematic
     {
         return $this->description;
     }
+
     /**
-     * Constructor
+     * Set typeEvent
+     *
+     * @param \AdminBundle\Entity\TypeEvent $typeEvent
+     *
+     * @return TypeEvent
      */
-    public function __construct()
+    public function setTypeEvent(\AdminBundle\Entity\TypeEvent $typeEvent = null)
     {
-        $this->project = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->typeEvent = $typeEvent;
+
+        return $this;
+    }
+
+
+    /**
+     * Get typeEvent
+     *
+     * @return \AdminBundle\Entity\TypeEvent
+     */
+    public function getTypeEvent()
+    {
+        return $this->typeEvent;
     }
 
     /**
-     * Add project
+     * Set event
      *
-     * @param \AdminBundle\Entity\Project $project
+     * @param \AdminBundle\Entity\Event $event
      *
-     * @return Problematic
+     * @return TypeEvent
      */
-    public function addProject(\AdminBundle\Entity\Project $project)
+    public function setEvent(\AdminBundle\Entity\Event $event = null)
     {
-        $this->project[] = $project;
+        $this->event = $event;
 
         return $this;
     }
 
     /**
-     * Remove project
+     * Get event
      *
-     * @param \AdminBundle\Entity\Project $project
+     * @return \AdminBundle\Entity\Event
      */
-    public function removeProject(\AdminBundle\Entity\Project $project)
+    public function getEvent()
     {
-        $this->project->removeElement($project);
-    }
-
-    /**
-     * Get project
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getProject()
-    {
-        return $this->project;
-    }
-
-    /**
-     * Set typeOfProblematic
-     *
-     * @param \AdminBundle\Entity\TypeOfProblematic $typeOfProblematic
-     *
-     * @return Problematic
-     */
-    public function setTypeOfProblematic(\AdminBundle\Entity\TypeOfProblematic $typeOfProblematic)
-    {
-        $this->typeOfProblematic = $typeOfProblematic;
-
-        return $this;
-    }
-
-    /**
-     * Get typeOfProblematic
-     *
-     * @return \AdminBundle\Entity\TypeOfProblematic
-     */
-    public function getTypeOfProblematic()
-    {
-        return $this->typeOfProblematic;
+        return $this->event;
     }
 
 
     // Function permetant de representeter un objet designé par une chaine de caractere (string) ex pour liste deroulante...
-
     public function __toString()
     {
         return $this->getName();
@@ -195,4 +172,5 @@ class Problematic
     //{
     //    return (string) $this->getId();
     //}
+
 }

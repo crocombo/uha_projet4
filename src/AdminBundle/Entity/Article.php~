@@ -50,21 +50,21 @@ class Article
 
     /**
      * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Document", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $document;
 
 
     /**
      * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Video", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $video;
 
 
     /**
      * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Image", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $image;
 
@@ -135,124 +135,5 @@ class Article
     {
         return $this->description;
     }
-
-    /**
-     * Set category
-     *
-     * @param \AdminBundle\Entity\Category $category
-     *
-     * @return Article
-     */
-    public function setCategory(\AdminBundle\Entity\Category $category)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return \AdminBundle\Entity\Category
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    /**
-     * Set document
-     *
-     * @param \AdminBundle\Entity\Document $document
-     *
-     * @return Article
-     */
-    public function setDocument(\AdminBundle\Entity\Document $document)
-    {
-        $this->document = $document;
-
-        return $this;
-    }
-
-    /**
-     * Get document
-     *
-     * @return \AdminBundle\Entity\Document
-     */
-    public function getDocument()
-    {
-        return $this->document;
-    }
-
-    /**
-     * Set video
-     *
-     * @param \AdminBundle\Entity\Video $video
-     *
-     * @return Article
-     */
-    public function setVideo(\AdminBundle\Entity\Video $video)
-    {
-        $this->video = $video;
-
-        return $this;
-    }
-
-    /**
-     * Get video
-     *
-     * @return \AdminBundle\Entity\Video
-     */
-    public function getVideo()
-    {
-        return $this->video;
-    }
-
-    /**
-     * Set image
-     *
-     * @param \AdminBundle\Entity\Image $image
-     *
-     * @return Article
-     */
-    public function setImage(\AdminBundle\Entity\Image $image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return \AdminBundle\Entity\Image
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    /**
-     * Set project
-     *
-     * @param \AdminBundle\Entity\Project $project
-     *
-     * @return Article
-     */
-    public function setProject(\AdminBundle\Entity\Project $project)
-    {
-        $this->project = $project;
-
-        return $this;
-    }
-
-    /**
-     * Get project
-     *
-     * @return \AdminBundle\Entity\Project
-     */
-    public function getProject()
-    {
-        return $this->project;
-    }
 }
+

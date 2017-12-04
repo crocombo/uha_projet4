@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Typeofevent</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ typeOfEvent.id }}</td>
+            </tr>
+            <tr>
+                <th>Ispublic</th>
+                <td>{% if typeOfEvent.isPublic %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Isfree</th>
+                <td>{% if typeOfEvent.isFree %}Yes{% else %}No{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('typeofevent_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('typeofevent_edit', { 'id': typeOfEvent.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

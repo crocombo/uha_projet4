@@ -29,7 +29,7 @@ class Document
 
     /**
      * @ORM\OneToOne(targetEntity="AdminBundle\Entity\Document", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $document;
 
