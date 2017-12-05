@@ -1,16 +1,27 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>User creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
 
-    <ul>
-        <li>
-            <a href="{{ path('user_index') }}">Back to the list</a>
-        </li>
-    </ul>
+                <h1>Création d'utilisateur:</h1>
+
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <input type="submit" value="Create" />
+                {{ form_end(form) }}
+
+                <ul>
+                    <li>
+                        <a href="{{ path('user_index') }}">Back to the list</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

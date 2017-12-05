@@ -1,41 +1,55 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Problematics list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for problematic in problematics %}
-            <tr>
-                <td><a href="{{ path('problematic_show', { 'id': problematic.id }) }}">{{ problematic.id }}</a></td>
-                <td>{{ problematic.name }}</td>
-                <td>{{ problematic.description }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('problematic_show', { 'id': problematic.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('problematic_edit', { 'id': problematic.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
 
-    <ul>
-        <li>
-            <a href="{{ path('problematic_new') }}">Create a new problematic</a>
-        </li>
-    </ul>
+            <h1>Liste des problematiques:</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for problematic in problematics %}
+                    <tr>
+                        <td><a href="{{ path('problematic_show', { 'id': problematic.id }) }}">{{ problematic.id }}</a></td>
+                        <td>{{ problematic.name }}</td>
+                        <td>{{ problematic.description }}</td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <a href="{{ path('problematic_show', { 'id': problematic.id }) }}">show</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('problematic_edit', { 'id': problematic.id }) }}">edit</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <ul>
+                <li>
+                    <a href="{{ path('problematic_new') }}">Create a new problematic</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 {% endblock %}
+
+

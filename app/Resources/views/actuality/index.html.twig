@@ -1,41 +1,52 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Actualities list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for actuality in actualities %}
-            <tr>
-                <td><a href="{{ path('actuality_show', { 'id': actuality.id }) }}">{{ actuality.id }}</a></td>
-                <td>{{ actuality.name }}</td>
-                <td>{{ actuality.description }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('actuality_show', { 'id': actuality.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('actuality_edit', { 'id': actuality.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
 
-    <ul>
-        <li>
-            <a href="{{ path('actuality_new') }}">Create a new actuality</a>
-        </li>
-    </ul>
+                <h1>Liste d'actualité:</h1>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for actuality in actualities %}
+                        <tr>
+                            <td><a href="{{ path('actuality_show', { 'id': actuality.id }) }}">{{ actuality.id }}</a></td>
+                            <td>{{ actuality.name }}</td>
+                            <td>{{ actuality.description }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('actuality_show', { 'id': actuality.id }) }}">show</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('actuality_edit', { 'id': actuality.id }) }}">edit</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                <ul>
+                    <li>
+                        <a href="{{ path('actuality_new') }}">Create a new actuality</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

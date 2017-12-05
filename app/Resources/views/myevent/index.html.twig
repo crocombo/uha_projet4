@@ -1,43 +1,54 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Myevents list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Typeoftheevent</th>
-                <th>Description</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for myEvent in myEvents %}
-            <tr>
-                <td><a href="{{ path('myevent_show', { 'id': myEvent.id }) }}">{{ myEvent.id }}</a></td>
-                <td>{{ myEvent.name }}</td>
-                <td>{{ myEvent.typeOfTheEvent }}</td>
-                <td>{{ myEvent.description }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('myevent_show', { 'id': myEvent.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('myevent_edit', { 'id': myEvent.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
 
-    <ul>
-        <li>
-            <a href="{{ path('myevent_new') }}">Create a new myEvent</a>
-        </li>
-    </ul>
+                <h1>Liste d'événement:'</h1>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Typeoftheevent</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for myEvent in myEvents %}
+                        <tr>
+                            <td><a href="{{ path('myevent_show', { 'id': myEvent.id }) }}">{{ myEvent.id }}</a></td>
+                            <td>{{ myEvent.name }}</td>
+                            <td>{{ myEvent.typeOfTheEvent }}</td>
+                            <td>{{ myEvent.description }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('myevent_show', { 'id': myEvent.id }) }}">show</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('myevent_edit', { 'id': myEvent.id }) }}">edit</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                <ul>
+                    <li>
+                        <a href="{{ path('myevent_new') }}">Create a new myEvent</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

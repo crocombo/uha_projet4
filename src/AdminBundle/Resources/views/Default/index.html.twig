@@ -1,90 +1,59 @@
+{% extends '::baseAdmin.html.twig' %}
 
-<!DOCTYPE html>
-<html>
+{% block body %}
 
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}4ITEC{% endblock %}</title>
-        <link rel="icon" type="image/x-icon" href="{{ asset('app/img/logo4.png')}}" />
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-
-
-
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-
-
-
-        <link href="{{ asset('app/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-
-        <!-- Custom fonts for this template -->
-        <link href="{{ asset('app/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-        <!-- Plugin CSS -->
-        <link href="{{ asset('app/vendor/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
-
-        <!-- Custom styles for this template -->
-        <link href="{{ asset('app/css/creative.min.css')}}" rel="stylesheet">
-
-        <!-- CSS-->
-        <link href="{{ asset('app/main.css')}}" rel="stylesheet">
-        {% block stylesheets %}{% endblock %}
-    </head>
-
-
-
-<!--********************************************* BODY              *********************************************-->
-    <body id="page-top">
-
-
-<!--********************************************* BLOC NAVIGATION    *********************************************-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            {{ include('AdminBundle:Includes:blocNavbarBack.html.twig') }}
-        </nav>
-
-
+<!--**********************************************************************************************************-->
 <!--********************************************* HEADER         *********************************************-->
-<header class="masthead text-center text-white d-flex">
-    <div class="container my-auto">
-        <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-                <img  src="{{ asset('app/img/   ')}}" alt="">
-            </h1>
+<!--**********************************************************************************************************-->
+<section id="portfolio">
+    <div class="container-fluid p-0">
+        <div class="row">      
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
+              <a href="{{ path('user_index') }}"><img class="img-fluid" src="{{ asset('app/img/icon/icon_users.png')}}" alt=""></a>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
+              <a href="{{ path('problematic_new') }}"><img class="img-fluid" src="{{ asset('app/img/icon/icon_problematic.png')}}" alt=""></a>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
+              <a href="{{ path('project_new') }}"><img class="img-fluid" src="{{ asset('app/img/icon/icon_project.png')}}" alt=""></a>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
+              <a href="{{ path('event_new') }}"><img class="img-fluid" src="{{ asset('app/img/icon/icon_event.png')}}" alt=""></a>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
+              <a href="{{ path('actuality_new') }}"><img class="img-fluid" src="{{ asset('app/img/icon/icon_actuality.png')}}" alt=""></a>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
+              <a href="{{ path('article_new') }}"><img class="img-fluid" src="{{ asset('app/img/icon/icon_articles.png')}}" alt=""></a>
+            </div>
+
         </div>
-        {#<p class="text-faded mb-5">Petite phrase d'accroche / logo au dessus éventuellement</p> #}
+     </div>
+</section>
+
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading text-white">4itec</h2>
+                <hr class="light my-4">
+                <p class="text-faded mb-4"><q>La science, c'est ce que le père enseigne à son fils. La technologie, c'est ce que le fils enseigne à son papa...</q><br>(Michel Serres)
+                </p>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="{{ path('app_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  4itec  </a>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Quitter</a>
+            </div>
+        </div>
     </div>
-</header>
-
-<!--********************************************* BLOC-BODY         *********************************************-->
-        {% block body %}{% endblock %}
+</section>
 
 
 
-<!--********************************************* SCRIPT            *********************************************-->
-        <!-- Bootstrap core JavaScript -->
-        <script src="{{ asset('app/vendor/jquery/jquery.min.js')}}"></script>
-        <script src="{{ asset('app/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-        <!-- Plugin JavaScript -->
-        <script src="{{ asset('app/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-        <script src="{{ asset('app/vendor/scrollreveal/scrollreveal.min.js')}}"></script>
-        <script src="{{ asset('app/vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
-
-        <!-- Custom scripts for this template -->
-        <script src="{{ asset('app/js/creative.min.js')}}"></script>
-        {% block javascripts %}{% endblock %}
-
-    </body>
-
-</html>
-
-
+{% endblock %}
 

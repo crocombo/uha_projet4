@@ -1,41 +1,52 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Projectuserroles list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Projectid</th>
-                <th>Userid</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for projectUserRole in projectUserRoles %}
-            <tr>
-                <td><a href="{{ path('projectuserrole_show', { 'id': projectUserRole.id }) }}">{{ projectUserRole.id }}</a></td>
-                <td>{{ projectUserRole.projectId }}</td>
-                <td>{{ projectUserRole.userId }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('projectuserrole_show', { 'id': projectUserRole.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('projectuserrole_edit', { 'id': projectUserRole.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
 
-    <ul>
-        <li>
-            <a href="{{ path('projectuserrole_new') }}">Create a new projectUserRole</a>
-        </li>
-    </ul>
+                <h1>Projectuserroles list</h1>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Projectid</th>
+                            <th>Userid</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for projectUserRole in projectUserRoles %}
+                        <tr>
+                            <td><a href="{{ path('projectuserrole_show', { 'id': projectUserRole.id }) }}">{{ projectUserRole.id }}</a></td>
+                            <td>{{ projectUserRole.projectId }}</td>
+                            <td>{{ projectUserRole.userId }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('projectuserrole_show', { 'id': projectUserRole.id }) }}">show</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('projectuserrole_edit', { 'id': projectUserRole.id }) }}">edit</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                <ul>
+                    <li>
+                        <a href="{{ path('projectuserrole_new') }}">Create a new projectUserRole</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

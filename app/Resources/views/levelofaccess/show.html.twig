@@ -1,36 +1,47 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Levelofaccess</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ levelOfAccess.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ levelOfAccess.title }}</td>
-            </tr>
-            <tr>
-                <th>Accesslevel</th>
-                <td>{{ levelOfAccess.accessLevel }}</td>
-            </tr>
-        </tbody>
-    </table>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
 
-    <ul>
-        <li>
-            <a href="{{ path('levelofaccess_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('levelofaccess_edit', { 'id': levelOfAccess.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+                <h1>Niveau d'accès:</h1>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Id</th>
+                            <td>{{ levelOfAccess.id }}</td>
+                        </tr>
+                        <tr>
+                            <th>Title</th>
+                            <td>{{ levelOfAccess.title }}</td>
+                        </tr>
+                        <tr>
+                            <th>Accesslevel</th>
+                            <td>{{ levelOfAccess.accessLevel }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul>
+                    <li>
+                        <a href="{{ path('levelofaccess_index') }}">Back to the list</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('levelofaccess_edit', { 'id': levelOfAccess.id }) }}">Edit</a>
+                    </li>
+                    <li>
+                        {{ form_start(delete_form) }}
+                            <input type="submit" value="Delete">
+                        {{ form_end(delete_form) }}
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

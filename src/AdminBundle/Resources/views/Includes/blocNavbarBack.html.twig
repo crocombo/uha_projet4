@@ -4,9 +4,12 @@
 <!-- Navigation -->
 <div class="container">
 
-    <a class="navbar-brand js-scroll-trigger" href="{{ path('app_homepage') }}">accueil</a>
+    <a class="navbar-brand js-scroll-trigger" href="{{ path('app_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 4itec</a>
 
-    <a class="navbar-brand js-scroll-trigger" href="{{ path('fos_user_security_logout') }}">déconnexion</a>
+    <a class="navbar-brand js-scroll-trigger" href="{{ path('admin_homepage') }}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Admin</a> 
+
+
+    <a class="navbar-brand js-scroll-trigger" href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Quitter</a>
 
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,34 +22,37 @@
 
 
 {#
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="{{ path('user_index') }}">utilisateurs</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ path('user_index') }}">utilisateurs</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="{{ path('project_index') }}">projets</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ path('project_index') }}">projets</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="{{ path('article_index') }}">articles</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ path('article_index') }}">articles</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="{{ path('actuality_index') }}">actualités</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ path('actuality_index') }}">actualités</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="{{ path('event_index') }}">événements</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ path('event_index') }}">événements</a>
+                </li>
 #}
 
 
 
             <li class="dropdown">
               <button class="btn btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                OPTIONS <span class="caret"></span>
+                <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> OPTIONS </a> <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="{{ path('admin_homepage') }}">Accueil Administarateur</a></li>
+                <li role="separator" class="divider"></li>
+
                 <li><a href="{{ path('groupmember_index') }}">Groupe</a></li>
                 <li><a href="{{ path('user_index') }}">Utilisateurs</a></li>
                 <li><a href="{{ path('projectuserrole_index') }}">Role d'utilisateur</a></li>
@@ -71,8 +77,6 @@
               </ul>
             </li>
 
-
-
         </ul>
     </div>
 </div>
@@ -96,13 +100,6 @@
 {{ path('typeevent_index') }}
 {{ path('event_index') }}
 {{ path('myevent_index') }}
-
-
-
-
-
-
-
 #}
 
 
