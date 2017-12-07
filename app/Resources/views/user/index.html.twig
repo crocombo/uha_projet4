@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
 
-                <h1>Liste d'utilisateur:</h1>
+                <h1>Users list</h1>
 
                 <table>
                     <thead>
@@ -19,14 +19,17 @@
                     <tbody>
                     {% for user in users %}
                         <tr>
-                            <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                            <td><a href="{{ path('*_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+
+                            <td><a href="{{ path('*_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+
                             <td>
                                 <ul>
                                     <li>
-                                        <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
+                                        <a href="{{ path('*_show', { 'id': user.id }) }}">show</a>
                                     </li>
                                     <li>
-                                        <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
+                                        <a href="{{ path('*_edit', { 'id': user.id }) }}">edit</a>
                                     </li>
                                 </ul>
                             </td>
@@ -37,7 +40,7 @@
 
                 <ul>
                     <li>
-                        <a href="{{ path('user_new') }}">Create a new user</a>
+                        <a href="{{ path('*_new') }}">Create a new user</a>
                     </li>
                 </ul>
 

@@ -1,6 +1,100 @@
 <!--**********************************************************************************************************-->
 <!--********************************************* ACTUALITES     *********************************************-->
 <!--**********************************************************************************************************-->
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="{{ path('app_new') }}">Actualités</a>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0">
+
+
+
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center container-fluid p-0">
+                <div class="row">
+
+                    {% for actuality in actualities %}
+                        {% if loop.index0 <=3 %}
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center" style="height:200px; overflow:scroll;">
+                                <a href="{{ path('app_new', { 'id': actuality.id }) }}"><span class="glyphicon glyphicon-calendar" aria-hidden="true">{{ actuality.name }}</span></a><br>
+                                {{ actuality.description }}
+                                <ul>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
+
+    </div>
+</section>
+
+
+{#
+<section id="portfolio">
+    <div class="container-fluid p-0">
+        <div class="row">      
+
+            {% for actuality in actualities %}
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
+                <a href="#"> </a>
+
+                <a href="{{ path('actuality_show', { 'id': actuality.id }) }}">{{ actuality.id }}</a>
+                {{ actuality.name }}{{ actuality.description }}
+                <ul>
+                    <li>
+                        <a href="{{ path('actuality_show', { 'id': actuality.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('actuality_edit', { 'id': actuality.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </div>
+            {% endfor %}
+
+        </div>
+     </div>
+</section>
+
+#}
+
+
+
+
+{#
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <a class="portfolio-box" href="{{ asset('app/img/actualite.jpg')}}">
+                    <div class="text-center">
+                        <img class="img-fluid" src="{{ asset('app/img/actualite.jpg')}}" alt="">
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category  text-faded">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Actualité
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+#}
+
+
+
+
+
+
+<!--**********************************************************************************************************-->
+<!--********************************************* ACTUALITES     *********************************************-->
+<!--**********************************************************************************************************-->
 {#  <!-- Actualité -->
     {% for article in myArticles %}
 
@@ -14,6 +108,9 @@
     {% endfor %}    #}
 
 
+
+
+{#
 
 <section id="services">
     <div class="container">
@@ -104,6 +201,6 @@
     </div>
 </section>
 
-
+#}
 
 

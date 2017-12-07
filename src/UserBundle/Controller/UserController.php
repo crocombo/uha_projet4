@@ -4,17 +4,21 @@ namespace UserBundle\Controller;
 
 use UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
 
 /**
  * User controller.
  *
+ * @Route("*")
  */
 class UserController extends Controller
 {
     /**
      * Lists all user entities.
      *
+     * @Route("/", name="*_index")
+     * @Method("GET")
      */
     public function indexAction()
     {
@@ -30,6 +34,8 @@ class UserController extends Controller
     /**
      * Creates a new user entity.
      *
+     * @Route("/new", name="*_new")
+     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
@@ -42,7 +48,7 @@ class UserController extends Controller
             $em->persist($user);
             $em->flush();
 
-            return $this->redirectToRoute('user_show', array('id' => $user->getId()));
+            return $this->redirectToRoute('*_show', array('id' => $user->getId()));
         }
 
         return $this->render('user/new.html.twig', array(
@@ -54,6 +60,8 @@ class UserController extends Controller
     /**
      * Finds and displays a user entity.
      *
+     * @Route("/{id}", name="*_show")
+     * @Method("GET")
      */
     public function showAction(User $user)
     {
@@ -68,6 +76,8 @@ class UserController extends Controller
     /**
      * Displays a form to edit an existing user entity.
      *
+     * @Route("/{id}/edit", name="*_edit")
+     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, User $user)
     {
@@ -78,7 +88,7 @@ class UserController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('user_edit', array('id' => $user->getId()));
+            return $this->redirectToRoute('*_edit', array('id' => $user->getId()));
         }
 
         return $this->render('user/edit.html.twig', array(
@@ -91,6 +101,8 @@ class UserController extends Controller
     /**
      * Deletes a user entity.
      *
+     * @Route("/{id}", name="*_delete")
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, User $user)
     {
@@ -103,7 +115,7 @@ class UserController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('user_index');
+        return $this->redirectToRoute('*_index');
     }
 
     /**
@@ -116,7 +128,7 @@ class UserController extends Controller
     private function createDeleteForm(User $user)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('user_delete', array('id' => $user->getId())))
+            ->setAction($this->generateUrl('*_delete', array('id' => $user->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;
