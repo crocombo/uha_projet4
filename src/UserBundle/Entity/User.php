@@ -66,5 +66,64 @@ class User extends BaseUser
 
 
 
-}
 
+    /**
+     * Set groupMember
+     *
+     * @param \AdminBundle\Entity\GroupMember $groupMember
+     *
+     * @return User
+     */
+    public function setGroupMember(\AdminBundle\Entity\GroupMember $groupMember = null)
+    {
+        $this->groupMember = $groupMember;
+
+        return $this;
+    }
+
+    /**
+     * Get groupMember
+     *
+     * @return \AdminBundle\Entity\GroupMember
+     */
+    public function getGroupMember()
+    {
+        return $this->groupMember;
+    }
+
+    /**
+     * Add projectUserRole
+     *
+     * @param \AdminBundle\Entity\ProjectUserRole $projectUserRole
+     *
+     * @return User
+     */
+    public function addProjectUserRole(\AdminBundle\Entity\ProjectUserRole $projectUserRole)
+    {
+        $this->projectUserRole[] = $projectUserRole;
+
+        return $this;
+    }
+
+    /**
+     * Remove projectUserRole
+     *
+     * @param \AdminBundle\Entity\ProjectUserRole $projectUserRole
+     */
+    public function removeProjectUserRole(\AdminBundle\Entity\ProjectUserRole $projectUserRole)
+    {
+        $this->projectUserRole->removeElement($projectUserRole);
+    }
+
+    /**
+     * Get projectUserRole
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProjectUserRole()
+    {
+        return $this->projectUserRole;
+    }
+
+
+}
