@@ -21,7 +21,7 @@
                     {% for actuality in actualities %}
                         {% if loop.index0 <=3 %}
                             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center" style="height:200px; overflow:scroll;">
-                                <a href="{{ path('app_new', { 'id': actuality.id }) }}"><span class="glyphicon glyphicon-calendar" aria-hidden="true">{{ actuality.name }}</span></a><br>
+                                <a href="{{ path('app_new', { 'id': actuality.id }) }}">{{ actuality.name }}</a><br>
                                 {{ actuality.description }}
                                 <ul>
                             </div>
@@ -95,21 +95,6 @@
 <!--**********************************************************************************************************-->
 <!--********************************************* ACTUALITES     *********************************************-->
 <!--**********************************************************************************************************-->
-{#  <!-- Actualité -->
-    {% for article in myArticles %}
-
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-              <div class="team-member">                          
-                  <div class="image"><a href="#"><img src="{{ asset('uploads/'~ article.image) }}" height="50px" width="100px" alt="" class="img-responsive"></a></div>
-                  <h3><a href="#">{{ article }}</a></h3>                                                                     
-              </div>
-          </div> 
-
-    {% endfor %}    #}
-
-
-
-
 {#
 
 <section id="services">

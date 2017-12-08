@@ -18,11 +18,13 @@ class DefaultController extends Controller
     {
 
         $em = $this->getDoctrine()->getManager();
-
         $actualities = $em->getRepository('AdminBundle:Actuality')->findAll();
+        $myEvents = $em->getRepository('AdminBundle:MyEvent')->findAll();
 
-        return $this->render('AppBundle:Default:index.html.twig', array('actualities' => $actualities,)
-        );
+        return $this->render('AppBundle:Default:index.html.twig', array(
+            'actualities' => $actualities,
+            'myEvents' => $myEvents,
+            ));
     }
 
 
@@ -38,7 +40,6 @@ class DefaultController extends Controller
     {
 
         $em = $this->getDoctrine()->getManager();
-
         $actualities = $em->getRepository('AdminBundle:Actuality')->findAll();
 
 
@@ -49,7 +50,11 @@ class DefaultController extends Controller
 // EVENT **************************************************************************************************************
       public function eventAction()
     {
-        return $this->render('AppBundle:Default:event.html.twig');
+
+        $em = $this->getDoctrine()->getManager();
+        $myEvents = $em->getRepository('AdminBundle:MyEvent')->findAll();
+
+        return $this->render('AppBundle:Default:event.html.twig', array('myEvents' => $myEvents,));
     }  
 
 
