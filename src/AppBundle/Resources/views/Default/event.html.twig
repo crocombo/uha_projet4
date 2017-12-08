@@ -13,7 +13,7 @@
                 <div class="row">
 
                     {% for myEvent in myEvents %}
-                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center" style="height:200px; overflow:scroll;">
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center" style="height:200px; overflow:scroll; margin-bottom:50px;">
                                 <a href="{{ path('app_event', { 'id': myEvent.id }) }}">{{ myEvent.name }}</a><br>
                                 <span style="color:red">{{ myEvent.typeOfTheEvent }}</span><br/>
                                 {{ myEvent.description }}
